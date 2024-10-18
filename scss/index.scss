@@ -1,0 +1,895 @@
+@import "reset";
+// @import "fonts";
+@import "varibles";
+@import "mixin";
+
+.container {
+  @include sm {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  max-width: 1300px;
+  margin: 0 auto;
+  .header {
+    background-color: #1b152b;
+    height: 60px;
+    border-radius: 47px;
+    padding: 0px 30px;
+    margin-top: 20px;
+    @include flex2;
+    .header-icon {
+      @include sm {
+        width: 92px;
+        height: 13px;
+      }
+    }
+    ul {
+      display: flex;
+      gap: 30px;
+      li {
+        @include sm {
+          display: none;
+        }
+        a {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+    .header-btn {
+      @include sm {
+        display: none;
+      }
+      @include btn-1;
+    }
+    @include sm_icon {
+      .res-icon {
+        display: none;
+      }
+    }
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // <!--content-one-->
+    .content-one {
+      @include flex3;
+      .content-inner {
+        @include flex1;
+
+        .span1 {
+          @include sm {
+            width: 296px;
+            height: 87px;
+            font-size: $font_md;
+          }
+          display: flex;
+          width: 1058px;
+          height: 174px;
+          font-size: $font_xl;
+          margin-top: $marginTop_md;
+        }
+        .span2 {
+          @include sm {
+            width: 304px;
+            height: 17px;
+            font-size: 12px;
+          }
+          font-size: $font_sm;
+          color: $textGray;
+        }
+        .btn-container {
+          margin-top: $marginTop_md;
+          @include flex4;
+          gap: 20px;
+
+          .btn1 {
+            @include sm {
+              width: 61px;
+              height: 27px;
+              font-size: 12px;
+            }
+            @include btn-2;
+          }
+          .btn2 {
+            @include sm {
+              width: 85px;
+              height: 27px;
+              font-size: 12px;
+            }
+            @include btn-1;
+          }
+        }
+
+        .hero-image {
+          margin-top: $marginTop_lg;
+          img {
+            @include sm {
+              width: 304px;
+              height: 245px;
+              border-radius: 16px;
+            }
+            width: 1058px;
+            height: 388px;
+            object-fit: cover;
+            border-radius: 98115.46px;
+          }
+        }
+        .ratings {
+          @include sm {
+            @include flex1;
+            gap: 20px;
+          }
+
+          display: flex;
+          gap: 100px;
+          margin-top: $marginTop_md;
+          h1 {
+            @include sm {
+              font-size: 20px;
+            }
+            font-size: $font_lg;
+            color: $secondryColor;
+          }
+          h4 {
+            @include sm {
+              font-size: $font_sm;
+            }
+            font-size: $font_md;
+            color: $secondryColor;
+          }
+        }
+      }
+    }
+
+    // <--content-two-->
+    .content-two {
+      @include sm {
+        width: 303px;
+        height: 1255px;
+        margin-top: 10px;
+      }
+      @include flex1;
+      margin-top: $marginTop_xxl;
+      .content-inner {
+        @include sm {
+          width: 303px;
+          height: 1086px;
+        }
+        @include flex1;
+        span {
+          @include flex4;
+          width: 85px;
+          height: 30px;
+          border-radius: $radius_sm;
+          background-color: #e9d8ff;
+          color: $secondryColor;
+          font-size: $font_sm;
+        }
+        h1 {
+          @include sm {
+            width: 295px;
+            height: 58px;
+            font-size: $font_md;
+          }
+          font-size: $font_lg;
+          margin-top: $marginTop_md;
+        }
+        h4 {
+          @include sm {
+            font-size: 12px;
+          }
+          font-size: $font_sm;
+          color: $textGray;
+          margin-top: 16px;
+        }
+      }
+      .cards {
+        @include sm {
+          display: flex;
+          flex-direction: column;
+          width: 287px;
+          height: 1023px;
+          margin-top: 5px;
+        }
+        @include flex3;
+        align-items: center;
+        margin-top: $marginTop_lg;
+        border: $brd;
+        border-radius: $radius_sm;
+        width: 1058px;
+        height: 422px;
+        gap: 30px;
+        // img {
+        // }
+        h1 {
+          width: 228px;
+          height: 58px;
+          font-size: $font_md;
+          margin-top: 10px;
+        }
+        h4 {
+          width: 231px;
+          height: 132px;
+          font-size: $font_sm;
+          color: $textGray;
+          margin-top: 10px;
+        }
+      }
+      .info-btn-container {
+        display: flex;
+        margin-top: $marginTop_sm;
+        gap: 30px;
+        .contact-btn1 {
+          @include btn-1;
+        }
+        .contact-btn2 {
+          background: transparent;
+          border: none;
+          font-size: $font_sm;
+        }
+      }
+    }
+
+    // <--content-three--->
+    .content-three {
+      @include sm {
+        display: flex;
+        flex-direction: column;
+        width: 311px;
+        height: 850px;
+      }
+      @include flex3;
+      width: 1058px;
+      height: 534px;
+      border: $brd;
+      border-radius: 16px;
+      margin-top: $marginTop_md;
+      .tree-spn {
+        display: flex;
+        position: relative;
+        span {
+          @include sm {
+            display: flex;
+            position: absolute;
+            top: -10px;
+            left: 17px;
+            width: 170px;
+            height: 25px;
+          }
+          @include flex4;
+          width: 196px;
+          height: 30px;
+          border-radius: $radius_sm;
+          background-color: #e9d8ff;
+          color: $secondryColor;
+          font-size: $font_sm;
+          position: absolute;
+          top: 35px;
+          left: 5px;
+        }
+      }
+
+      .content-three-container {
+        @include sm {
+          display: flex;
+          flex-direction: column-reverse;
+          width: 311px;
+          height: 802px;
+        }
+        @include flex4;
+
+        gap: 30px;
+        .content-three-inner {
+          @include flex6;
+
+          h1 {
+            @include sm {
+              width: 279px;
+              height: 72px;
+              font-size: 20px;
+            }
+            width: 501px;
+            height: 132px;
+            font-size: 36px;
+          }
+          h4 {
+            @include sm {
+              width: 279px;
+              height: 136px;
+              font-size: 12px;
+            }
+            width: 501px;
+            height: 144px;
+            color: $textGray;
+            font-size: $font_sm;
+          }
+          .btn-container-three {
+            @include flex7;
+            .btn-signup {
+              @include sm {
+                width: 39px;
+                height: 17px;
+                font-size: 12px;
+              }
+              width: 49px;
+              height: 19px;
+              background: transparent;
+              border: none;
+              font-size: $font_sm;
+              color: $secondryColor;
+            }
+            .btn-contact {
+              @include sm {
+                width: 85px;
+                height: 27px;
+                font-size: 12px;
+              }
+              @include btn-1;
+            }
+          }
+        }
+        .image2-container {
+          img {
+            @include sm {
+              width: 279px;
+              height: 448px;
+            }
+            width: 489px;
+            height: 448px;
+            border-radius: $radius_md;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    // <--content-four--->
+    .content-four {
+      @include flex1;
+      margin-top: $marginTop_md;
+      .content-four-inner {
+        @include flex1;
+        gap: 20px;
+        span {
+          @include flex4;
+          width: 99px;
+          height: 30px;
+          border-radius: $radius_sm;
+          background-color: #e9d8ff;
+          color: $secondryColor;
+          font-size: $font_sm;
+        }
+        h1 {
+          @include sm {
+            width: 311px;
+            height: 58px;
+            font-size: $font_md;
+          }
+          width: 800px;
+          height: 58px;
+          font-size: $font_lg;
+        }
+        h4 {
+          @include sm {
+            width: 311px;
+            height: 51px;
+            font-size: 12px;
+          }
+          width: 720px;
+          height: 44px;
+          font-size: $font_sm;
+          color: $textGray;
+        }
+      }
+      .content-four-clients {
+        .client-container {
+          @include sm {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            width: 311px;
+            height: 164px;
+            .icon-cnt1 {
+              display: flex;
+              gap: 30px;
+            }
+            .icon-cnt2 {
+              display: flex;
+              gap: 53px;
+            }
+            .icon-cnt3 {
+            }
+          }
+          display: flex;
+          justify-content: space-between;
+          width: 1058px;
+          margin-top: $marginTop_sm;
+          .icon-cnt1 {
+            display: flex;
+            gap: 84px;
+          }
+          .icon-cnt2 {
+            display: flex;
+            gap: 92px;
+          }
+        }
+      }
+    }
+    // <---content-five--->
+    .content-five {
+      @include sm {
+        display: none;
+      }
+      @include flex3;
+      margin-top: $marginTop_md;
+      .content-five-container {
+        @include flex4;
+        width: 1058px;
+        height: 534px;
+        border: $brd;
+        border-radius: 16px;
+        gap: 30px;
+        .content-five-inner {
+          @include flex6;
+          span {
+            @include flex4;
+            width: 94px;
+            height: 30px;
+            border-radius: $radius_sm;
+            background-color: #e9d8ff;
+            color: $secondryColor;
+            font-size: $font_sm;
+          }
+          h1 {
+            width: 501px;
+            height: 80px;
+            font-size: 36px;
+            color: $secondryColor2;
+          }
+          h4 {
+            width: 501px;
+            height: 114px;
+            color: $textGray;
+            font-size: $font_sm;
+          }
+          .btn-container-five {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+          }
+        }
+        .image2-container {
+          img {
+            width: 489px;
+            height: 448px;
+            border-radius: $radius_md;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    //<----content-six---->
+    .testimonials {
+      @include sm {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: start;
+        margin-top: 0px;
+        width: 313px;
+        height: 925px;
+      }
+      @include flex1;
+      margin-top: $marginTop_xxl;
+      span {
+        @include flex4;
+        width: 113px;
+        height: 30px;
+        border-radius: $radius_sm;
+        background-color: #e9d8ff;
+        color: $secondryColor;
+        font-size: $font_sm;
+      }
+      h1 {
+        @include sm {
+          width: 261px;
+          height: 29px;
+          font-size: $font_md;
+        }
+        font-size: $font_lg;
+      }
+      .testimonials-container {
+        @include sm {
+          display: flex;
+          flex-direction: column;
+          padding: 10px 0px;
+          width: 311px;
+          height: 770px;
+        }
+        @include flex4;
+        width: 1058px;
+        height: 447px;
+        border: $brd;
+        border-radius: 16px;
+        gap: 30px;
+        .testimonials-img {
+          img {
+            @include sm {
+              width: 297px;
+              height: 335px;
+            }
+            width: 495px;
+            height: 335px;
+            border-radius: $radius_lt;
+            object-fit: cover;
+          }
+        }
+        .testimonials-content {
+          @include flex8;
+
+          p {
+            @include sm {
+              width: 297px;
+              height: 266px;
+            }
+            display: flex;
+            text-align: justify;
+            width: 440px;
+            height: 171px;
+            font-size: $font_sm;
+            color: $textGray;
+          }
+          .name-container {
+            @include flex8;
+            h1 {
+              @include sm {
+                font-size: $font_sm;
+              }
+              font-size: $font_md;
+            }
+            h2 {
+              @include sm {
+                font-size: $font_sm;
+              }
+              font-size: 20px;
+            }
+          }
+          .testimonials-icons {
+            @include sm {
+              height: 24px;
+            }
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: $marginTop_md;
+          }
+        }
+      }
+    }
+
+    //<----content-seven---->
+    .trustedBy {
+      @include flex1;
+      margin-top: $marginTop_md;
+      .line-container {
+        @include sm {
+          width: 313px;
+        }
+        display: flex;
+        align-items: center;
+        width: 1058px;
+        .line {
+          flex-grow: 1;
+          height: 1px;
+          background-color: $textGray;
+          border: none;
+        }
+        .text {
+          padding: 0 10px;
+          color: $textGray;
+          font-size: $font_sm;
+        }
+      }
+      .trustedBy-logos-container {
+        @include flex1;
+        margin-top: $marginTop_sm;
+        .logos1 {
+          @include flex9;
+          @include sm {
+            display: flex;
+            gap: 30px;
+            img {
+              width: 85px;
+              height: 24px;
+            }
+          }
+        }
+        .logos2 {
+          @include flex9;
+          @include sm {
+            display: flex;
+            gap: 30px;
+            img {
+              width: 85px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    //<---content-eight---->
+    .blogs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .blogs-content {
+        @include flex1;
+        margin-top: $marginTop_xxl;
+        span {
+          @include flex4;
+          width: 63px;
+          height: 30px;
+          border-radius: $radius_sm;
+          background-color: #e9d8ff;
+          color: $secondryColor;
+          font-size: $font_sm;
+        }
+        h1 {
+          @include sm {
+            font-size: $font_md;
+          }
+          font-size: $font_lg;
+          margin-top: $marginTop_sm;
+        }
+      }
+      .cards-container {
+        @include sm {
+          display: flex;
+          flex-direction: column;
+          width: 313px;
+        }
+        @include flex4;
+        gap: 30px;
+        margin-top: $marginTop_md;
+        .cards-content {
+          @include sm {
+            display: flex;
+            align-items: end;
+            width: 313px;
+          }
+          @include flex3;
+          align-items: center;
+          flex-direction: column;
+          @include cards-container;
+          .cards {
+            @include sm {
+              margin-top: 1px;
+            }
+            @include flex10;
+            width: 292px;
+            height: 505px;
+            .card-img {
+              @include flex3;
+              img {
+                @include sm {
+                  width: 273px;
+                  height: 220px;
+                }
+                @include img;
+              }
+            }
+            .card-btn {
+              @include flex4;
+              @include btn-3;
+            }
+            .card-content {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              h2 {
+                font-size: 20px;
+              }
+              h4 {
+                font-size: $font_sm;
+                color: $textGray;
+              }
+            }
+          }
+          .read-more {
+            @include sm {
+              padding-right: 10px;
+            }
+            display: flex;
+            padding-left: 200px;
+            margin-top: 10px;
+            a {
+              font-size: $font_sm;
+              text-decoration: underline;
+              color: $textGray;
+            }
+          }
+        }
+      }
+      .info-btn-container {
+        display: flex;
+        margin-top: $marginTop_sm;
+        gap: 30px;
+        .contact-btn1 {
+          @include btn-1;
+        }
+        .contact-btn2 {
+          background: transparent;
+          border: none;
+          font-size: $font_sm;
+        }
+      }
+    }
+    //<---content-nine---->
+    .email-section {
+      @include flex1;
+      .content-email {
+        @include sm {
+          width: 310px;
+          height: 570px;
+          object-fit: cover;
+        }
+        @include flex1;
+        background-image: url(../assets/img/image5.jpg);
+        object-fit: cover;
+        width: 1058px;
+        height: 570px;
+        border-radius: 24px;
+        margin-top: $marginTop_md;
+        .email-container {
+          @include flex1;
+          gap: 40px;
+          .vector-email {
+            img {
+              @include sm {
+                width: 48px;
+                height: 46px;
+              }
+            }
+          }
+          .email-text-container {
+            @include flex1;
+            gap: 20px;
+            h1 {
+              @include sm {
+                font-size: 20px;
+              }
+              font-size: $font_lg;
+              color: $rootColor;
+            }
+            h3 {
+              @include sm {
+                width: 284px;
+                height: 49.8px;
+                font-size: 12px;
+              }
+              width: 410.12px;
+              height: 49.8px;
+              font-size: 20px;
+              color: $rootColor;
+            }
+          }
+          .email-input {
+            @include sm {
+              display: flex;
+              position: unset;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+            }
+            @include input-button-container;
+            input {
+              @include sm {
+                width: 283px;
+                height: 48px;
+              }
+              width: 470px;
+              height: 48px;
+              border-radius: 12px;
+              border: none;
+              padding-left: 20px;
+            }
+            .input-button {
+              @include sm {
+                position: unset;
+                transform: none;
+                width: 209px;
+                height: 42px;
+              }
+              @include input-button;
+              width: 209px;
+              height: 42px;
+              border-radius: 10px;
+              border: none;
+              background-color: $secondryColor;
+              color: $rootColor;
+              font-size: $font_sm;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  @include flex3;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #a182e4;
+  height: 265px;
+  margin-top: $marginTop_xxl;
+  .hr {
+    @include sm {
+      width: 285px;
+    }
+    width: 1148px;
+  }
+  .footer-content1 {
+    @include sm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 285px;
+      height: 62px;
+    }
+    @include flex11;
+    width: 1148px;
+    padding: 40px 0px;
+    .footer-logo {
+    }
+    .footer-list-container {
+      ul {
+        @include sm {
+          display: flex;
+          gap: 10px;
+        }
+        @include flex3;
+        gap: 20px;
+        a {
+          @include sm {
+            width: 257px;
+            height: 22px;
+          }
+          color: $rootColor;
+          font-size: $font_sm;
+        }
+      }
+    }
+  }
+
+  .footer-content2 {
+    @include sm {
+      width: 285px;
+      margin-top: 10px;
+    }
+    @include flex11;
+    align-items: center;
+    width: 1148px;
+    margin-top: $marginTop_md;
+    span {
+      @include sm {
+        width: 251px;
+        height: 17px;
+        font-size: 12px;
+      }
+      font-size: 16px;
+      color: $rootColor;
+    }
+    .footer-icon-container {
+      @include sm {
+        display: none;
+      }
+      display: flex;
+      gap: 20px;
+      height: 16px;
+    }
+  }
+}
